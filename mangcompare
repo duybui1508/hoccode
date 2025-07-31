@@ -1,0 +1,14 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define ll long long
+bool cmp(int x, int y){
+   if(x>y) return true;
+   else return false;
+}
+int main(){
+  int a[]={3,1,5,6,7,8,9,2,4};
+  int n=9 ;
+  sort(a, a+n, cmp);
+  for(int x : a) cout << x << " ";
+ }
+  
