@@ -1,0 +1,22 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define ll long long
+int tong(int n){
+   int ans=0;
+   while(n){
+      ans += n%10;
+      n/=10;
+   }
+   return ans;
+}
+bool cmp(int x, int y){
+   if(abs(x)>abs(y)) return true;
+   else return false;
+}
+int main(){
+  int a[]={1000001, 23, 129387912, 13917391 , 23927839 , 23231, 1313232, 1321323232, 43424141};
+  int n=9 ;
+  sort(a, a+n, cmp);
+  for(int x : a) cout << x << " ";
+ }
+  
