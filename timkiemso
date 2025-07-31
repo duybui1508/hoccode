@@ -1,0 +1,22 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define ll long long
+bool bs(int a[], int l, int r, int x){
+   while(l<r){
+      int m=(l+r)/2;
+      if(a[m]==x){
+         return true;
+      }
+      else if(a[m]<x){
+         l=m+1;
+      }
+      else {
+         r=m-1;
+      }
+   }
+   return false;
+}
+int main(){
+  int a[]={1,1,2,3,5,7,8,10};
+  cout << bs(a,0,7,8) << endl;
+}
