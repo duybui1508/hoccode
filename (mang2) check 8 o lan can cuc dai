@@ -1,0 +1,32 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define ll long long
+d[x]={-1, -1, -1, 0, 0, 1, 1, 1};
+d[y]={-1, 0, 1, -1, 1, -1, 0,1};
+int main(){
+   int n,m;
+   cin >> n >> m ;
+   int a[50][50];
+   for(int i=0; i<n; i++){
+      for(int j=0; j<n; j++){
+         cin >> a[i][j];
+      }
+}
+   int dem=0;
+   for(int i=0; i<n; i++){
+      for(int j=0; j<n; j++){
+         bool check= true;
+         for(int k=0; k<8; k++):{
+            int i1=i+d[x];
+            int j1=j+d[y];
+            if(i1 >=0 && i1 < n && j1>=0 && j1 <m && a[i1][j1] >= a[i][j]){
+               check=false;
+               break;
+
+            }
+         }
+         if(check) ++dem;
+      }
+   }  
+   cout << dem<< endl;
+  }
