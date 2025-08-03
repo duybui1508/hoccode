@@ -1,0 +1,18 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define ll long long
+int main(){
+   string s;
+   getline(cin, s);
+   reverse(s.begin(), s.end());
+   cout << s << endl;
+   reverse(s.begin(), s.end());
+   for(char &x : s){
+      x= (char)tolower(x);
+   }
+   cout << s<< endl;
+   for(char &x : s){
+      x=(char)toupper(x);
+   }
+   cout << s << endl;
+}
